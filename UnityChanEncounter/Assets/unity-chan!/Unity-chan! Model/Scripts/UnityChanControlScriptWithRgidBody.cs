@@ -12,8 +12,10 @@ namespace UnityChan
 	[RequireComponent(typeof(Animator))]
 	[RequireComponent(typeof(CapsuleCollider))]
 	[RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(PlayerStatus))]
+    [RequireComponent(typeof(MobAttack))]
 
-	public class UnityChanControlScriptWithRgidBody : MonoBehaviour
+    public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 	{
 
 		public float animSpeed = 1.5f;				// アニメーション再生速度設定
@@ -43,6 +45,9 @@ namespace UnityChan
 		private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
 
 		private GameObject cameraObject;	// メインカメラへの参照
+
+        private PlayerStatus _status;
+        private MobAttack _attack;
 		
 		// アニメーター各ステートへの参照
 		static int idleState = Animator.StringToHash ("Base Layer.Idle");
@@ -63,6 +68,9 @@ namespace UnityChan
 			// CapsuleColliderコンポーネントのHeight、Centerの初期値を保存する
 			orgColHight = col.height;
 			orgVectColCenter = col.center;
+
+            _status = GetComponent<PlayerStatus>();
+            _attack = GetComponent<MobAttack>();
 		}
 	
 	
@@ -101,10 +109,16 @@ namespace UnityChan
 					}
 				}
 			}
-		
 
-			// 上下のキー入力でキャラクターを移動させる
-			transform.localPosition += velocity * Time.fixedDeltaTime;
+            if (Input.GetButtonDown("Fire1"))
+            {
+                anim.SetBool("Attack", true);
+            }
+
+
+
+            // 上下のキー入力でキャラクターを移動させる
+            transform.localPosition += velocity * Time.fixedDeltaTime;
 
 			// 左右のキー入力でキャラクタをY軸で旋回させる
 			transform.Rotate (0, h * rotateSpeed, 0);	
@@ -119,9 +133,9 @@ namespace UnityChan
 					resetCollider ();
 				}
 			}
-		// JUMP中の処理
-		// 現在のベースレイヤーがjumpStateの時
-		else if (currentBaseState.nameHash == jumpState) {
+		    // JUMP中の処理
+		    // 現在のベースレイヤーがjumpStateの時
+		    else if (currentBaseState.nameHash == jumpState) {
 				cameraObject.SendMessage ("setCameraPositionJumpView");	// ジャンプ中のカメラに変更
 				// ステートがトランジション中でない場合
 				if (!anim.IsInTransition (0)) {
