@@ -5,7 +5,13 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider))]
 public class CollisionD : MonoBehaviour
 {
+    [SerializeField] private TriggerEvent onTriggerEnter = new TriggerEvent();
     [SerializeField] private TriggerEvent onTriggerStay = new TriggerEvent();
+
+    private void OnTriggerEnter(Collider other)
+    {
+        onTriggerEnter.Invoke(other);
+    }
 
     /// <summary>
     /// Is TriggerがONで他のColliderと重なっているときは、このメソッドが常にコールされる
