@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstMap.unity
     guid: 0ff75ebad576f1842a7116b2bdd1035c
-  - enabled: 1
-    path: Assets/Scenes/FightScene.unity
+  - enabled: 0
+    path: Assets/Scenes/FightMap.unity
     guid: 45330c9ad7abf8348b5c3f932a9a5aa8
   m_configObjects: {}

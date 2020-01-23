@@ -1,9 +1,8 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/bacch/OneDrive/UCE/UnityChanEncounter/UnityChanEncounter.exe
+C:/Users/bacch/OneDrive/UCE/UnityChanEncounter.exe
 SceneListBegin?
 Assets/Scenes/FirstMap.unity
-Assets/Scenes/FightMap.unity
 SceneListEnd?
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.LevelReset
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -277,6 +276,7 @@ d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+15f4eeb4855a09eba1d030f16d54b8a0 Assembly-CSharp.dll:.PlayerStatus
 f2143d8859d27c6fb35088337df79fd9 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Vehicles.Aeroplane.AeroplaneControlSurfaceAnimator
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 06d51b8055e70ca39cec8ba3a3a6b0e1 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Vehicles.Car.CarAudio
@@ -317,4 +317,3 @@ df03e2ffa8b3251f71a6c2235d50c66b Assembly-CSharp.dll:UnityStandardAssets.ImageEf
 f59ca19b2477a0f8545617e6a1dec4b4 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.Tonemapping
 36ed8d92a07a53bf383bc90e377cc388 Assembly-CSharp-firstpass.dll:UnityStandardAssets._2D.PlatformerCharacter2D
 695c9335429d4798b6f74ca73c042ff4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-15f4eeb4855a09eba1d030f16d54b8a0 Assembly-CSharp.dll:.PlayerStatus
