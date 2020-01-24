@@ -10,7 +10,7 @@ UnityChanを操作し、マップを自由に散策してみましょう。
 モンスターは移動はしませんが、Idle状態のアニメーションを行っています。 
 
 UnityChanが行えることは、  
-・走る(WASDキー)　
+・走る(WASDキー)  
 ・ジャンプ(スペースキー)  
 ・レスト行動(動いていない状態でスペースキー)  
 ・剣で攻撃(左クリック)  
@@ -32,6 +32,6 @@ UnityChanEncounter.exeを開くと開始します。
 © Unity Technologies Japan/UCL  
 [ユニティちゃんライセンス条項](https://unity-chan.com/contents/guideline/)
 
-## Author
-[bacchusjazz6248](https://github.com/bacchusjazz6248)  
-香川大学大学院 工学研究科 信頼性情報システム工学専攻 土居高輔
+## Author  
+香川大学大学院 工学研究科 信頼性情報システム工学専攻 土居高輔  
+GitHubアカウント [bacchusjazz6248](https://github.com/bacchusjazz6248)
